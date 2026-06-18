@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Visual Security — Électricien à Brétigny-sur-Orge | Dépannage électrique 24h</title>
+<meta name="description" content="Électricien à Brétigny-sur-Orge (91220). Dépannage électrique sous 24h, rénovation d'installation et borne de recharge véhicule électrique. 7j/7. Devis gratuit — 06 58 88 44 96." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue:#1E5BBF;
+    --blue-dark:#16458f;
+    --blue-deep:#0d2a5c;
+    --red:#E11D2A;
+    --red-dark:#b8141f;
+    --ink:#0F1B2D;
+    --slate:#475569;
+    --line:#E4E9F0;
+    --bg:#FFFFFF;
+    --bg-soft:#F4F7FC;
+    --gold:#F5A623;
+    --shadow:0 4px 24px rgba(15,27,45,.08);
+    --shadow-lg:0 18px 50px rgba(13,42,92,.16);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Lexend',sans-serif;line-height:1.15;letter-spacing:-.02em}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 22px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:'Lexend',sans-serif;font-weight:600;font-size:1.02rem;
+    padding:15px 26px;border-radius:12px;cursor:pointer;border:0;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  }
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(225,29,42,.32)}
+  .btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+  .btn-ghost{background:#fff;color:var(--blue);border:2px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--blue);transform:translateY(-2px)}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 22px rgba(30,91,191,.3)}
+  .btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px)}
+  .ic{width:20px;height:20px;flex:none;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-family:'Lexend',sans-serif;
+    font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--blue);background:rgba(30,91,191,.09);padding:7px 14px;border-radius:999px;
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{background:var(--blue-deep);color:#cdd9ee;font-size:.9rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:42px;flex-wrap:wrap}
+  .topbar .item{display:inline-flex;align-items:center;gap:7px}
+  .topbar .ic{width:16px;height:16px;stroke:#7fa6e0}
+  .topbar strong{color:#fff}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:18px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:'Lexend',sans-serif;font-weight:800;font-size:1.32rem;color:var(--blue-deep)}
+  .logo .mark{
+    width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));
+    display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.15rem;letter-spacing:-.04em;box-shadow:var(--shadow)
+  }
+  .logo small{display:block;font-family:'Source Sans 3';font-weight:500;font-size:.7rem;color:var(--slate);letter-spacing:.18em;text-transform:uppercase}
+  .nav-links{display:flex;gap:30px;font-weight:600;font-size:.97rem;color:var(--slate)}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{display:inline-flex;align-items:center;gap:9px;font-family:'Lexend';font-weight:700;color:var(--red);font-size:1.05rem}
+  @media(max-width:900px){.nav-links{display:none}}
+  @media(max-width:720px){.nav-cta .btn-red{display:none}.logo small{display:none}.nav-phone span{display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:
+    radial-gradient(1100px 520px at 88% -8%,rgba(30,91,191,.14),transparent 60%),
+    linear-gradient(180deg,#fff 0%,var(--bg-soft) 100%);overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:64px 22px 70px}
+  .hero h1{font-size:3.05rem;font-weight:800;color:var(--ink);margin:18px 0 16px}
+  .hero h1 .hl{color:var(--blue)}
+  .hero p.lead{font-size:1.2rem;color:var(--slate);max-width:520px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+  .hero-badges{display:flex;gap:24px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line)}
+  .hbadge{display:flex;align-items:center;gap:11px}
+  .hbadge .b-ic{width:42px;height:42px;border-radius:11px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);box-shadow:var(--shadow)}
+  .hbadge b{display:block;font-family:'Lexend';font-size:1.02rem;color:var(--ink)}
+  .hbadge span{font-size:.85rem;color:var(--slate)}
+  .stars{color:var(--gold);letter-spacing:1px}
+
+  /* hero visual card */
+  .hero-card{position:relative;background:linear-gradient(155deg,var(--blue-deep),var(--blue));border-radius:24px;padding:34px;color:#fff;box-shadow:var(--shadow-lg)}
+  .hero-card::after{content:"";position:absolute;inset:0;border-radius:24px;background:radial-gradient(400px 200px at 80% 0,rgba(255,255,255,.18),transparent 60%);pointer-events:none}
+  .hero-card h3{font-size:1.35rem;margin-bottom:6px}
+  .hero-card .muted{color:#bcd0f0;font-size:.95rem;margin-bottom:22px}
+  .hc-row{display:flex;align-items:center;gap:14px;padding:15px 0;border-top:1px solid rgba(255,255,255,.14)}
+  .hc-row .ic{stroke:#9dc0ff}
+  .hc-row b{font-family:'Lexend';display:block;font-size:1.02rem}
+  .hc-row span{color:#bcd0f0;font-size:.88rem}
+  .hc-urgency{margin-top:24px;background:var(--red);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:13px}
+  .hc-urgency .ic{stroke:#fff;width:26px;height:26px}
+  .hc-urgency b{font-family:'Lexend';font-size:1.06rem;display:block}
+  .hc-urgency span{font-size:.85rem;color:#ffd9dc}
+  @media(max-width:920px){
+    .hero .wrap{grid-template-columns:1fr;gap:38px;padding:46px 22px 54px}
+    .hero h1{font-size:2.3rem}
+    .hero-card{order:-1}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{padding:78px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px}
+  .sec-head h2{font-size:2.2rem;font-weight:700;margin:14px 0 12px}
+  .sec-head p{color:var(--slate);font-size:1.1rem}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--bg-soft)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .card .c-ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(30,91,191,.12),rgba(30,91,191,.04));display:grid;place-items:center;color:var(--blue);margin-bottom:18px}
+  .card .c-ic .ic{width:28px;height:28px;stroke-width:1.9}
+  .card h3{font-size:1.25rem;margin-bottom:10px}
+  .card p{color:var(--slate);font-size:1rem;margin-bottom:16px}
+  .card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .card li{display:flex;align-items:flex-start;gap:9px;font-size:.95rem;color:var(--ink)}
+  .card li .ic{width:18px;height:18px;stroke:var(--blue);margin-top:3px}
+  @media(max-width:900px){.grid3{grid-template-columns:1fr}}
+
+  /* ---------- WHY / TRUST STRIP ---------- */
+  .why .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .stat{text-align:center;padding:26px 16px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+  .stat .ic{width:34px;height:34px;stroke:var(--blue);margin:0 auto 12px}
+  .stat b{font-family:'Lexend';font-size:1.7rem;display:block;color:var(--blue-deep)}
+  .stat span{color:var(--slate);font-size:.95rem}
+  @media(max-width:820px){.why .grid4{grid-template-columns:1fr 1fr}}
+
+  /* ---------- REVIEWS ---------- */
+  .reviews{background:var(--bg-soft)}
+  .gbar{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:40px;flex-wrap:wrap}
+  .gbar .gnote{font-family:'Lexend';font-weight:700;font-size:2rem;color:var(--ink)}
+  .gbar .gsub{color:var(--slate);font-size:.95rem}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+  .rev .stars{font-size:1.05rem}
+  .rev p{color:var(--ink);font-size:1rem;flex:1}
+  .rev .who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+  .rev .av{width:42px;height:42px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:'Lexend';font-weight:700}
+  .rev .who b{font-family:'Lexend';font-size:.98rem;display:block}
+  .rev .who span{color:var(--slate);font-size:.82rem}
+  @media(max-width:900px){.rgrid{grid-template-columns:1fr}}
+
+  /* ---------- INFO / HORAIRES ---------- */
+  .info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .info-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+  .info-box h3{font-size:1.3rem;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .info-box h3 .ic{stroke:var(--blue)}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .hours li:last-child{border:0}
+  .hours .open{color:#16a34a;font-weight:600}
+  .contact-line{display:flex;align-items:center;gap:13px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .contact-line:last-child{border:0}
+  .contact-line .ci{width:44px;height:44px;border-radius:11px;background:var(--bg-soft);display:grid;place-items:center;color:var(--blue);flex:none}
+  .contact-line span{color:var(--slate);font-size:.85rem;display:block}
+  .contact-line b{font-family:'Lexend';font-size:1.08rem}
+  @media(max-width:820px){.info .wrap{grid-template-columns:1fr}}
+
+  /* ---------- FINAL CTA ---------- */
+  .cta-final{background:linear-gradient(150deg,var(--blue-deep),var(--blue));color:#fff;text-align:center}
+  .cta-final h2{font-size:2.3rem;margin-bottom:14px}
+  .cta-final p{color:#c8d8f3;font-size:1.15rem;max-width:560px;margin:0 auto 30px}
+  .cta-final .hero-actions{justify-content:center}
+  .cta-final .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .cta-final .btn-ghost:hover{border-color:#fff}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0a1626;color:#8ea2c0;padding:46px 0 28px;font-size:.92rem}
+  footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.08)}
+  footer .logo{color:#fff}
+  footer .logo small{color:#8ea2c0}
+  footer .fcol b{color:#fff;font-family:'Lexend';display:block;margin-bottom:10px}
+  footer .fcol a{display:block;color:#8ea2c0;padding:3px 0}
+  footer .fcol a:hover{color:#fff}
+  footer .copy{padding-top:22px;text-align:center;color:#5d7193}
+
+  /* ---------- STICKY MOBILE CALL ---------- */
+  .mobile-call{display:none}
+  @media(max-width:720px){
+    .mobile-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;gap:0}
+    .mobile-call a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-family:'Lexend';font-weight:700;color:#fff}
+    .mobile-call .mc-call{background:var(--red)}
+    .mobile-call .mc-quote{background:var(--blue)}
+    body{padding-bottom:56px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="item"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Brétigny-sur-Orge &amp; alentours (91)</span>
+    <span class="item"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Intervention <strong>&nbsp;sous 24h — 7j/7</strong></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <span class="mark">VS</span>
+      <span>Visual&nbsp;Security<small>Électricité générale</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Prestations</a>
+      <a href="#avis">Avis clients</a>
+      <a href="#zone">Zone &amp; horaires</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+33658884496" class="nav-phone">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+        <span>06 58 88 44 96</span>
+      </a>
+      <a href="tel:+33658884496" class="btn btn-red">Dépannage</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><svg class="ic" viewBox="0 0 24 24" style="width:15px;height:15px"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg> Électricien certifié — Courant fort &amp; courant faible</span>
+      <h1>Votre électricien à Brétigny, <span class="hl">disponible sous 24h.</span></h1>
+      <p class="lead">Dépannage électrique d'urgence, rénovation d'installation et borne de recharge pour véhicule électrique. Travail soigné, prix justes — 7j/7.</p>
+      <div class="hero-actions">
+        <a href="tel:+33658884496" class="btn btn-red">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+          Appeler 06 58 88 44 96
+        </a>
+        <a href="#contact" class="btn btn-ghost">Demander un devis gratuit</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hbadge">
+          <div class="b-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.5L12 16.9 5.9 19.4 7.4 12.9l-5-4.3L9 8z"/></svg></div>
+          <div><b>5,0 <span class="stars">★★★★★</span></b><span>Avis Google vérifiés</span></div>
+        </div>
+        <div class="hbadge">
+          <div class="b-ic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><b>Sous 24h</b><span>Urgence électrique</span></div>
+        </div>
+        <div class="hbadge">
+          <div class="b-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div><b>Devis gratuit</b><span>Sans engagement</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Une urgence électrique ?</h3>
+      <p class="muted">Panne, court-circuit, tableau qui disjoncte… On intervient vite et bien.</p>
+      <div class="hc-row">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+        <div><b>Dépannage électrique</b><span>Diagnostic et remise en service rapide</span></div>
+      </div>
+      <div class="hc-row">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        <div><b>Rénovation d'installation</b><span>Mise aux normes, tableau, câblage</span></div>
+      </div>
+      <div class="hc-row">
+        <svg class="ic" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M12 11v5M10 13h4"/></svg>
+        <div><b>Borne de recharge VE</b><span>Installation pour véhicule électrique</span></div>
+      </div>
+      <a href="tel:+33658884496" class="hc-urgency">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+        <div style="color:#fff"><b>06 58 88 44 96</b><span>Appel direct — réponse rapide</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="block services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Nos prestations</span>
+      <h2>Tout pour votre électricité, en toute sécurité</h2>
+      <p>De l'urgence au projet complet, Visual Security prend en charge vos installations en courant fort et courant faible.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="c-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>Dépannage électrique</h3>
+        <p>Une panne, un disjoncteur qui saute, une prise HS ? On localise et on répare.</p>
+        <ul>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Intervention sous 24h</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Recherche de panne</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Sécurisation immédiate</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="c-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Rénovation électrique</h3>
+        <p>Mise aux normes, remplacement de tableau, refonte complète de l'installation.</p>
+        <ul>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Tableau &amp; câblage</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Mise en conformité</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Neuf &amp; rénovation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="c-ic"><svg class="ic" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M12 11v5M10 13h4"/></svg></div>
+        <h3>Borne de recharge VE</h3>
+        <p>Installation de borne pour véhicule électrique à domicile ou en entreprise.</p>
+        <ul>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Maison &amp; copropriété</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Sécurisation des locaux</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Conseil sur la puissance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="block why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pourquoi nous choisir</span>
+      <h2>Un artisan local en qui vous pouvez avoir confiance</h2>
+    </div>
+    <div class="grid4">
+      <div class="stat">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.5L12 16.9 5.9 19.4 7.4 12.9l-5-4.3L9 8z"/></svg>
+        <b>5,0 / 5</b><span>Note moyenne des avis</span>
+      </div>
+      <div class="stat">
+        <svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <b>24h</b><span>Délai d'intervention</span>
+      </div>
+      <div class="stat">
+        <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <b>7j/7</b><span>Disponible toute la semaine</span>
+      </div>
+      <div class="stat">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <b>Sérieux</b><span>Travail soigné &amp; garanti</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="block reviews" id="avis">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ils nous recommandent</span>
+      <h2>Ce que disent nos clients</h2>
+    </div>
+    <div class="gbar">
+      <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.4-2-6.3-4.6H2v2.8A11 11 0 0012 23z"/><path fill="#FBBC05" d="M5.7 14.1a6.6 6.6 0 010-4.2V7.1H2a11 11 0 000 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 002 7.1l3.7 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>
+      <div><span class="gnote">5,0</span> <span class="stars" style="font-size:1.2rem">★★★★★</span><div class="gsub">Avis Google &amp; Pages Jaunes</div></div>
+    </div>
+    <div class="rgrid">
+      <div class="rev">
+        <span class="stars">★★★★★</span>
+        <p>« L'intervention a été rapide et efficace. Les prix pratiqués ne sont pas chers, je recommande vivement. »</p>
+        <div class="who"><span class="av">N</span><div><b>Nadi A.</b><span>Avis Google</span></div></div>
+      </div>
+      <div class="rev">
+        <span class="stars">★★★★★</span>
+        <p>« Très sérieux, très professionnel, ponctuel, travail bien fait. Je recommande, ils sont au top, bon rapport qualité-prix. »</p>
+        <div class="who"><span class="av">J</span><div><b>Jox D.</b><span>Avis Google</span></div></div>
+      </div>
+      <div class="rev">
+        <span class="stars">★★★★★</span>
+        <p>« Entreprise très sérieuse et réactive qui intervient rapidement, avec un très bon rapport qualité-prix. »</p>
+        <div class="who"><span class="av">K</span><div><b>Karine L.</b><span>Avis Google</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO / ZONE / HORAIRES -->
+<section class="block info" id="zone">
+  <div class="wrap">
+    <div class="info-box">
+      <h3><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Horaires d'ouverture</h3>
+      <ul class="hours">
+        <li><span>Lundi</span> <span class="open">07:00 – 20:00</span></li>
+        <li><span>Mardi</span> <span class="open">07:00 – 20:00</span></li>
+        <li><span>Mercredi</span> <span class="open">07:00 – 20:00</span></li>
+        <li><span>Jeudi</span> <span class="open">07:00 – 20:00</span></li>
+        <li><span>Vendredi</span> <span class="open">07:00 – 20:00</span></li>
+        <li><span>Samedi</span> <span class="open">07:00 – 20:00</span></li>
+        <li><span>Dimanche</span> <span class="open">07:00 – 20:00</span></li>
+      </ul>
+    </div>
+    <div class="info-box" id="contact">
+      <h3><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Nous contacter</h3>
+      <a href="tel:+33658884496" class="contact-line">
+        <span class="ci"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></span>
+        <div><span>Téléphone</span><b>06 58 88 44 96</b></div>
+      </a>
+      <div class="contact-line">
+        <span class="ci"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <div><span>Adresse</span><b>Rue Pierre Brossolette, 91220 Brétigny-sur-Orge</b></div>
+      </div>
+      <div class="contact-line">
+        <span class="ci"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><span>Disponibilité</span><b>7j/7 — intervention sous 24h</b></div>
+      </div>
+      <a href="tel:+33658884496" class="btn btn-red" style="width:100%;margin-top:20px">Appeler maintenant</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="block cta-final">
+  <div class="wrap">
+    <h2>Un projet ou une urgence ? Parlons-en.</h2>
+    <p>Devis gratuit et sans engagement. Visual Security intervient à Brétigny-sur-Orge et dans tout le secteur, 7j/7.</p>
+    <div class="hero-actions">
+      <a href="tel:+33658884496" class="btn btn-red">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+        06 58 88 44 96
+      </a>
+      <a href="mailto:?subject=Demande%20de%20devis%20-%20Visual%20Security" class="btn btn-ghost">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a href="#" class="logo"><span class="mark">VS</span><span>Visual&nbsp;Security<small>Électricité générale</small></span></a>
+        <p style="margin-top:14px;max-width:300px">Électricien à Brétigny-sur-Orge. Courant fort &amp; courant faible, dépannage, rénovation et bornes de recharge.</p>
+      </div>
+      <div class="fcol">
+        <b>Prestations</b>
+        <a href="#services">Dépannage électrique</a>
+        <a href="#services">Rénovation d'installation</a>
+        <a href="#services">Borne de recharge VE</a>
+        <a href="#services">Sécurisation des locaux</a>
+      </div>
+      <div class="fcol">
+        <b>Contact</b>
+        <a href="tel:+33658884496">06 58 88 44 96</a>
+        <a href="#zone">Rue Pierre Brossolette, 91220</a>
+        <a href="#zone">Brétigny-sur-Orge</a>
+        <a href="#zone">7j/7 — 07:00 à 20:00</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Visual Security — Électricité générale · Brétigny-sur-Orge (91)</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE -->
+<div class="mobile-call">
+  <a href="tel:+33658884496" class="mc-call"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg> Appeler</a>
+  <a href="#contact" class="mc-quote"><svg class="ic" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg> Devis</a>
+</div>
+
+</body>
+</html>
