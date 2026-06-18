@@ -109,9 +109,20 @@
   .hc-urgency b{font-family:'Lexend';font-size:1.06rem;display:block}
   .hc-urgency span{font-size:.85rem;color:#ffd9dc}
   @media(max-width:920px){
-    .hero .wrap{grid-template-columns:1fr;gap:38px;padding:46px 22px 54px}
-    .hero h1{font-size:2.3rem}
-    .hero-card{order:-1}
+    .hero .wrap{grid-template-columns:1fr;gap:30px;padding:38px 22px 46px}
+    .hero h1{font-size:2.15rem}
+    .hero p.lead{font-size:1.08rem}
+    .hero-actions{flex-direction:column}
+    .hero-actions .btn{width:100%}
+    /* titre + CTA d'abord, bloc bleu ensuite et compact */
+    .hero-card{order:2;padding:24px 22px}
+    .hero-card h3{font-size:1.2rem}
+    .hero-card .muted{margin-bottom:14px}
+    .hc-row{padding:12px 0}
+  }
+  @media(max-width:430px){
+    .eyebrow{font-size:.72rem;padding:6px 12px}
+    .hero h1{font-size:1.95rem}
   }
 
   /* ---------- SECTION SHELL ---------- */
